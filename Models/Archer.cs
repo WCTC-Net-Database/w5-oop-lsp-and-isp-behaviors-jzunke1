@@ -2,23 +2,18 @@
 
 namespace W5_assignment_template.Models
 {
-    public class Ghost : IEntity, IFlyable
+    public class Archer : IEntity
     {
         public string Name { get; set; }
-
-        public void Attack(IEntity target)
-        {
-            Console.WriteLine($"{Name} attacks {target.Name}.");
-        }
 
         public void Move()
         {
             Console.WriteLine($"{Name} moves.");
         }
 
-        public void Fly()
+        public void Attack(IEntity target)
         {
-            Console.WriteLine($"{Name} flies.");
+            Console.WriteLine($"{Name} shoots an arrow at {target.Name}.");
         }
     }
 }

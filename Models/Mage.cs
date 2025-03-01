@@ -2,19 +2,23 @@
 
 namespace W5_assignment_template.Models
 {
-    public class Goblin : IEntity
+    public class Mage : IEntity, ICastable
     {
         public string Name { get; set; }
+
+        public void Move()
+        {
+            Console.WriteLine($"{Name} glides forward.");
+        }
 
         public void Attack(IEntity target)
         {
             Console.WriteLine($"{Name} attacks {target.Name}.");
         }
 
-        public void Move()
+        public void CastSpell(string spellName)
         {
-            Console.WriteLine($"{Name} moves.");
+            Console.WriteLine($"{Name} casts {spellName}.");
         }
     }
-
 }

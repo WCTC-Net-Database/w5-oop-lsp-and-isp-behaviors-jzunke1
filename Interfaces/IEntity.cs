@@ -2,9 +2,9 @@
 {
     public interface IEntity
     {
+        string Name { get; set; }
         void Attack(IEntity target);
         void Move();
-        string Name { get; set; }
     }
 
 }
